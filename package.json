@@ -10,7 +10,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "ngc": "ng g component",
-    "ngcs": "ng g class"
+    "ngcs": "ng g class",
+    "deploy": "gh-pages -d dist"
   },
   "private": true,
   "dependencies": {
