@@ -1,0 +1,49 @@
+@import "~styles/colors";
+
+.loader {
+  &,
+  &::before {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(map-get($map: $colors, $key: beta), 0.9);
+  }
+
+  & {
+    z-index: 9;
+    opacity: 0;
+    visibility: hidden;
+    transition: .4s;
+  }
+
+  &:before {
+    content: "";
+    margin: auto;
+    font-size: 48px;
+    width: 1em;
+    height: 1em;
+    border: 2px solid rgba(map-get($map: $colors, $key: text), 0.2);
+    border-top-color: map-get($map: $colors, $key: text);
+    border-radius: 50%;
+    background: 0;
+    animation: rotate 1s linear infinite;
+    animation-play-state: paused;
+  }
+
+  &_active {
+    & {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &::before {
+      animation-play-state: running;
+    }
+  }
+
+  @keyframes rotate {
+    to { transform: rotate(1turn); }
+  }
+}

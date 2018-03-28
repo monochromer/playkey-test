@@ -1,0 +1,14 @@
+@mixin hoverable() {
+  & {
+    transition: background-color 0.1s;
+    cursor: pointer;
+  }
+
+  &:hover {
+    background-color: rgba(map-get($colors, beta), 0.1);
+  }
+
+  &:active {
+    background-color: rgba(map-get($colors, beta), 0.2);
+  }
+}

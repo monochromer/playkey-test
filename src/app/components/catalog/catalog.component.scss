@@ -1,0 +1,10 @@
+.catalog {
+  position: relative;
+  display: block;
+
+  &__filter {
+    position: sticky;
+    z-index: 2;
+    top: 0;
+  }
+}

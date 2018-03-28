@@ -1,0 +1,15 @@
+.top-section {
+  $height: 66px;
+  display: block;
+  position: relative;
+  padding-top: $height;
+
+  &__header {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: $height;
+  }
+}
